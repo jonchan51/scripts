@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+// Tested with TamperMonkey on FireFox
+
 (function() {
     'use strict';
 
