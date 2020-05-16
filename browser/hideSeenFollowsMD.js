@@ -23,12 +23,13 @@
 
   function hideSeen() {
     // hide seen chapters
-    arr.filter(elem => elem.querySelector('span[class="chapter_mark_unread_button"]'))
+    arr.filter(elem => elem.querySelector('.fas.fa-eye.fa-fw'))
+       .slice(1) // ignore header
        .forEach(elem => elem.hidden = true);
 
     // if current node has no title, and previous node not around,
     // set
-    let unseen = arr.filter(elem => elem.querySelector('span[class="chapter_mark_read_button grey"]'))
+    let unseen = arr.filter(elem => elem.querySelector('.fas.fa-eye-slash.fa-fw'))
                     .map(elem => elem.firstElementChild.firstElementChild);
     if (unseen.length > 0) {
       // ensure first row always has a title
